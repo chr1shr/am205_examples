@@ -10,7 +10,7 @@ primarily written in Python, and make use of several commonly-used libraries
 
 - NumPy for numerical linear algebra (www.numpy.org)
 - SciPy for scientific routines and algorithms (www.scipy.org)
-- Matplotlib for graphing and visualization
+- Matplotlib for graphing and visualization (matplotlib.org)
 
 Organization
 ============
