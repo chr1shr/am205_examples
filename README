@@ -1,0 +1,26 @@
+Harvard Applied Math 205: Code examples
+=======================================
+Harvard AM205 is a graduate course the provides a broad overview of scientific
+computing. See the main website here:
+
+http://iacs-courses.seas.harvard.edu/courses/am205/
+
+This Git repository contains example codes from the course. The codes are
+primarily written in Python, and make use of several commonly-used libraries
+
+- NumPy for numerical linear algebra (www.numpy.org)
+- SciPy for scientific routines and algorithms (www.scipy.org)
+- Matplotlib for graphing and visualization
+
+Organization
+============
+The course is divided into six units:
+
+- Unit 0: Overview of Scientific Computing
+- Unit 1: Data Fitting
+- Unit 2: Numerical Linear Algebra
+- Unit 3: Numerical Calculus and Differential Equations
+- Unit 4: Nonlinear Equations and Optimization
+- Unit 5: Eigenvalue Problems
+
+Example codes from each unit are provided in separate directories.
