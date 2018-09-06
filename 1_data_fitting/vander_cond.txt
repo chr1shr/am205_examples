@@ -1,0 +1,32 @@
+The following is a transcript of an interactive Python session to examine the
+condition number of a Vandermonde matrix. It shows that Vandermonde matrices
+have high condition numbers, which grow rapidly as the size the matrix
+increases. Note that the Vandermonde matrix given in Python has a different
+ordering convention than that given in lecture notes, but this does not affect
+its properties or the condition number calculation.
+
+Python 2.7.10 (default, Oct  6 2017, 22:29:07) 
+[GCC 4.2.1 Compatible Apple LLVM 9.0.0 (clang-900.0.31)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import numpy as np
+>>> a=np.array([[0.5,0,0],[0,2,0],[0,0,3]])
+>>> a
+array([[ 0.5,  0. ,  0. ],
+       [ 0. ,  2. ,  0. ],
+       [ 0. ,  0. ,  3. ]])
+>>> np.linalg.cond(a)
+6.0
+>>> np.linspace(0,1,5)
+array([ 0.  ,  0.25,  0.5 ,  0.75,  1.  ])
+>>> np.vander(np.linspace(0,1,5))
+array([[ 0.        ,  0.        ,  0.        ,  0.        ,  1.        ],
+       [ 0.00390625,  0.015625  ,  0.0625    ,  0.25      ,  1.        ],
+       [ 0.0625    ,  0.125     ,  0.25      ,  0.5       ,  1.        ],
+       [ 0.31640625,  0.421875  ,  0.5625    ,  0.75      ,  1.        ],
+       [ 1.        ,  1.        ,  1.        ,  1.        ,  1.        ]])
+>>> np.linalg.cond(np.vander(np.linspace(0,1,5)))
+686.43494181860353
+>>> np.linalg.cond(np.vander(np.linspace(0,1,10)))
+15193229.675258102
+>>> np.linalg.cond(np.vander(np.linspace(1,2,10)))
+267610655666.92737
