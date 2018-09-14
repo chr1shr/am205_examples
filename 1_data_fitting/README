@@ -36,3 +36,14 @@ cos(4*x). It uses two different methods: a direct approach based on the normal
 equations (which is generally ill-conditioned) and a built-in Python routine,
 lstsq, that uses a different algorithm with better conditioning. The methods
 used by lstsq will be discussed later in the course.
+
+np_lfit.py - program to do linear least squares fitting of a sum of
+exponentials to a given function. This program demonstrates the the linear
+least squares does not just work for polynomials.
+
+under_lfit.py - program demonstrating underconstrained least squares, whereby
+a high-degree polynomial is fitted to a small number of data points by
+imposing additional constraints.
+
+nonlinlsq.py - a nonlinear least squares problem based on finding the position
+of a radio transmitter based on signal received at nearby beacons.
