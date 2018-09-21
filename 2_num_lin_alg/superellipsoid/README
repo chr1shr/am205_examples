@@ -1,0 +1,54 @@
+Superellipsoid movie
+====================
+This directory indulges Chris's slightly irrational obsession with
+superellipsoids, given by the unit ball in the 4-norm,
+
+x^4 + y^4 + z^4 = 1.
+
+This makes use of POV-Ray (www.povray.org) a freely available ray-tracing
+program. POV-Ray is available for Windows, Mac, and Linux and makes use of a
+simple scripting language to describe a scene for rendering. It is well-suited
+to high quality scientific visualization, since it is possible to take
+simulation output and convert it into POV-Ray input files.
+
+Single superellipsoid
+=====================
+The file super.pov describes a single superellipsoid. This makes use POV-Ray's
+"polynomial" object, which allows the unit ball equation above to be directly
+specified. To render the scene, type
+
+povray +W800 +H600 -J +A0.1 +R3 +Osuper.png super.pov
+
+The first two options give the size of the image as 800x600. The next three
+control the rendering quality using oversampling and anti-aliasing. This
+command will produce a PNG image super.png of the superellipsoid.
+
+Superellipsoid movie
+====================
+To make a movie, one can run POV-Ray on a sequence of input scripts with minor
+tweaks to generate an image sequence. The Perl script movie.pl reads in the
+POV-Ray template s_template.pov and creates a temporary rendering file
+render.pov with several key values "AAA", "BBB", ... replaced with varying
+parameters. Typing
+
+./movie.pl
+
+will run POV-Ray on a sequence of temporary files to make the movie frames. By
+default, the script is set to create a small set of low-quality frames, but
+it can be adjusted to increase quality.
+
+Making a movie
+==============
+Once the script is run, it is necessary to convert the image sequence into a
+movie file. Unfortunately, there are no ubiquitous standards for easily
+creating high-quality, high-compression movies, and there are a number of
+different tools available that depend on your platform:
+
+- On the Mac, the package qt_tools (http://dvb.omino.com/sw/qt_tools/)
+  provides a command-line interface to Apple's own QuickTime libraries.
+
+- FFMPEG (https://www.ffmpeg.org) is a good open-source solution that is an
+  attractive choice on Linux.
+
+- On Windows, the VirtualDub utility is good for making movies
+  (http://virtualdub.org).
