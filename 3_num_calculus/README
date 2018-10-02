@@ -1,0 +1,15 @@
+Harvard Applied Math 205: Code Examples
+Unit 3: Numerical Calculus
+==========================
+quadrat.py - Integrates a function using composite trapezoid and Simpson's
+rules. Outputs the error as a function of the interval length h. 
+
+diff.py - Constructs a differentiation matrix, and uses it to calculate the
+derivative of a test function.
+
+l-v.py - Demonstrates Python's black box integration routine odeint in the
+scipy.integrate module. Solves the two-component Lotka–Volterra model for
+predator–prey interactions.
+
+euler.py - Demonstrates the simple first-order forward Euler method for
+integrating an ordinary differential equation.
