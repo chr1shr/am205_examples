@@ -13,3 +13,10 @@ predator–prey interactions.
 
 euler.py - Demonstrates the simple first-order forward Euler method for
 integrating an ordinary differential equation.
+
+e_stab.py - Tests the stability of the choice of timestep in the forward Euler
+method
+
+order2.py - Demonstrates three different second-order time-integration
+schemes: the modified Euler method, the improved Euler method, and Ralston's
+method.
