@@ -16,10 +16,10 @@ while t<=2:
 
     # Analytical solution
     yexact=exp(lam*t)
-    
+
     # Print the solutions and error
     print t,y,yexact,y-yexact
-    
+
     # Euler step
     y=y+dt*(lam*y)
 

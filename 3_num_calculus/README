@@ -20,3 +20,18 @@ method
 order2.py - Demonstrates three different second-order time-integration
 schemes: the modified Euler method, the improved Euler method, and Ralston's
 method.
+
+r_extrap.py - Demonstrates Richardson extrapolation once and twice to the
+forward Euler method, to achieve methods on second and third order,
+respectively.
+
+ad-bash.py - Solves a differential equation using a second-order
+Adams-Bashforth multi-step scheme.
+
+stiff.py - Solves a two-component differential equation that has one stiff
+mode. It uses an explict scheme and an implicit scheme. The explicit scheme
+has a very strict timestep restriction, while the implicit scheme is
+unconditionally stable.
+
+stiff2.py - Demonstrates using Python's black-box stiff solver for the
+same two-component differential equation from stiff.py.
