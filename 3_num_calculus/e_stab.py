@@ -3,25 +3,25 @@
 from math import *
 
 # Initial variables and constants
-x=1
+y=1
 t=0
 dt=0.1
 
 # Choose the constant in the ODE, dx/dt=-lam*x. We need -2=<dt*lam=<0 for
-# stability 
+# stability.
 lam=-25
 
-# Apply Euler step until t>6
+# Apply Euler step until t>2
 while t<=2:
 
-    # Analytic solution
-    xexact=exp(lam*t)
+    # Analytical solution
+    yexact=exp(lam*t)
     
     # Print the solutions and error
-    print t,x,xexact,x-xexact
+    print t,y,yexact,y-yexact
     
     # Euler step
-    x=x+dt*(lam*x)
+    y=y+dt*(lam*y)
 
     # Update time
     t+=dt
