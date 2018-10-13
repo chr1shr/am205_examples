@@ -21,9 +21,8 @@ order2.py - Demonstrates three different second-order time-integration
 schemes: the modified Euler method, the improved Euler method, and Ralston's
 method.
 
-r_extrap.py - Demonstrates Richardson extrapolation once and twice to the
-forward Euler method, to achieve methods on second and third order,
-respectively.
+r_extrap.py - Demonstrates applying Richardson extrapolation to the forward
+Euler method, to achieve a new method of second order.
 
 ad-bash.py - Solves a differential equation using a second-order
 Adams-Bashforth multi-step scheme.
