@@ -21,10 +21,10 @@ while t<=2:
 
     # Analytical solution
     yexact=sin(t)
-    
+
     # Print the solutions and error
     print t,yme,yie,yhe,yexact,yme-yexact,yie-yexact,yhe-yexact
-    
+
     # Modified Euler step
     k1=h*f(t,yme)
     k2=h*f(t+0.5*h,yme+0.5*k1)

@@ -5,13 +5,11 @@ from math import *
 # Initial variables and constants
 y=1
 t=0
-dt=0.1
+dt=0.05
+hdt=dt*0.5
+lam=0.5
 
-# Choose the constant in the ODE, dx/dt=-lam*x. We need -2=<dt*lam=<0 for
-# stability.
-lam=-25
-
-# Apply Euler step until t>2
+# Apply Richardson method until t>2
 while t<=2:
 
     # Analytical solution
@@ -21,7 +19,14 @@ while t<=2:
     print t,y,yexact,y-yexact
 
     # Euler step
-    y=y+dt*(lam*y)
+    y_1=y+dt*(lam*y)
+
+    # Two Euler half steps
+    yh=y+hdt*(lam*y)
+    y_2=yh+hdt*(lam*yh)
+
+    # Richardson eytrapolation
+    y=y_2+(y_2-y_1)/(2-1)
 
     # Update time
     t+=dt
