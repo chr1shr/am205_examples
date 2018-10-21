@@ -24,9 +24,6 @@ method.
 r_extrap.py - Demonstrates applying Richardson extrapolation to the forward
 Euler method, to achieve a new method of second order.
 
-ad-bash.py - Solves a differential equation using a second-order
-Adams-Bashforth multi-step scheme.
-
 stiff.py - Solves a two-component differential equation that has one stiff
 mode. It uses an explict scheme and an implicit scheme. The explicit scheme
 has a very strict timestep restriction, while the implicit scheme is
@@ -34,3 +31,24 @@ unconditionally stable.
 
 stiff2.py - Demonstrates using Python's black-box stiff solver for the
 same two-component differential equation from stiff.py.
+
+ad-bash.py - Solves a differential equation using a second-order
+Adams-Bashforth multi-step scheme.
+
+ode_bvp.py - Solves an ODE boundary value problem by formulating it as a
+linear system using finite differences.
+
+transp.py - Solves the linear advection equation using a first-order scheme
+with an upwinded one-sided derivative.
+
+transp2.py - Solves the linear advection equation where the spatial derivative
+is calculated using a second-order centered-difference scheme. This scheme is
+slightly unstable, which becomes apparant after many timesteps have been
+performed.
+
+m_of_lines.py - Demonstrates the method of lines for the linear advection
+equation, whereby the spatial grid is discretized but the system is
+time-integrated using a black-box ODE integration routine.
+
+heat.py - Solves the heat equation on a periodic unit interval using an
+explicit finite difference scheme.
