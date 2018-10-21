@@ -24,6 +24,9 @@ method.
 r_extrap.py - Demonstrates applying Richardson extrapolation to the forward
 Euler method, to achieve a new method of second order.
 
+r_extrap2.py - Demonstrates applying Richardson extrapolation twice to the
+forward Euler method, to achieve a new method of third order.
+
 stiff.py - Solves a two-component differential equation that has one stiff
 mode. It uses an explict scheme and an implicit scheme. The explicit scheme
 has a very strict timestep restriction, while the implicit scheme is
@@ -52,3 +55,9 @@ time-integrated using a black-box ODE integration routine.
 
 heat.py - Solves the heat equation on a periodic unit interval using an
 explicit finite difference scheme.
+
+c-n.py - Solves the heat equation using the Crank-Nicolson method, which is
+second-order in space and time, and unconditionally stable.
+
+poisson.py - Solves the two-dimensional Poisson equation using a linear solve
+of a finite-difference discretization.
