@@ -13,7 +13,7 @@ lam=0.5
 # Apply Richardson method until t>2
 while t<=2:
 
-    # Analytic solution
+    # Analytical solution
     xexact=exp(lam*t)
 
     # Print the solutions and error
