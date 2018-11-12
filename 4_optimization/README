@@ -16,3 +16,15 @@ weights in the two-point Gauss quadrature scheme.
 
 nr_secant.py - Uses the Newton-Raphson and secant methods to find the solution
 to a nonlinear equation.
+
+h_newton.py - Finds critical points of the Himmelblau function using the
+Newton method.
+
+h_bfgs.py - Finds minima of the Himmelblau function using the BFGS
+optimization method.
+
+linprog.py - this Python program solves the linear program described in the
+slides. It makes use of the Python module cvxopt that is available online.
+
+linprog_alt.py - this is an alternative Python program that solves the same
+linear program, but with the linprog library in SciPy.
