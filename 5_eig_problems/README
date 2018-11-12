@@ -1,0 +1,30 @@
+Harvard Applied Math 205: Code Examples
+Unit 4: Nonlinear Equations and Optimization
+============================================
+bisection.py - Demonstrates the one-dimensional bisection root-finding
+algorithm.
+
+iter.py - Demonstrates two possible fixed-point iterations for finding the
+solution to a nonlinear equation. One converges to the solution, whereas the
+other diverges.
+
+iter_2d.py - Demonstrates a fixed-point iteration to find the solution of a
+two-dimensional nonlinear function.
+
+fsolve.py - Demonstrates Python's "fsolve" routine for finding the nodes and
+weights in the two-point Gauss quadrature scheme.
+
+nr_secant.py - Uses the Newton-Raphson and secant methods to find the solution
+to a nonlinear equation.
+
+h_newton.py - Finds critical points of the Himmelblau function using the
+Newton method.
+
+h_bfgs.py - Finds minima of the Himmelblau function using the BFGS
+optimization method.
+
+linprog.py - this Python program solves the linear program described in the
+slides. It makes use of the Python module cvxopt that is available online.
+
+linprog_alt.py - this is an alternative Python program that solves the same
+linear program, but with the linprog library in SciPy.
