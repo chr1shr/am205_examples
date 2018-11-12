@@ -1,30 +1,21 @@
 Harvard Applied Math 205: Code Examples
-Unit 4: Nonlinear Equations and Optimization
-============================================
-bisection.py - Demonstrates the one-dimensional bisection root-finding
-algorithm.
+Unit 5: Eigenvalue Problems
+===========================
+square_eig.py - Demonstrates Python's "eigs" function for finding the
+eigenvalues and eigenvectors of a sparse matrix. Calculates fundamental
+mode vibrations on a square drum, described by the 2D wave equation.
 
-iter.py - Demonstrates two possible fixed-point iterations for finding the
-solution to a nonlinear equation. One converges to the solution, whereas the
-other diverges.
+power_method.py - Demonstrates the shifted power method for extracting
+an eigenvector of a matrix.
 
-iter_2d.py - Demonstrates a fixed-point iteration to find the solution of a
-two-dimensional nonlinear function.
+rayleigh_iter.py - Demonstrates the Rayleigh quotient method for rapidly
+estimating an eigenvalue.
 
-fsolve.py - Demonstrates Python's "fsolve" routine for finding the nodes and
-weights in the two-point Gauss quadrature scheme.
+qr_example.py - Demonstrates the QR method for finding eigenvalues and
+eigenvectors.
 
-nr_secant.py - Uses the Newton-Raphson and secant methods to find the solution
-to a nonlinear equation.
+lanczos.py - Demonstrates the Lanczos algorithm (an example of a Krylov
+subspace method) for estimating a subset of eigenvalues.
 
-h_newton.py - Finds critical points of the Himmelblau function using the
-Newton method.
-
-h_bfgs.py - Finds minima of the Himmelblau function using the BFGS
-optimization method.
-
-linprog.py - this Python program solves the linear program described in the
-slides. It makes use of the Python module cvxopt that is available online.
-
-linprog_alt.py - this is an alternative Python program that solves the same
-linear program, but with the linprog library in SciPy.
+poisson_cg.py - Solves the Poisson equation on a square using the conjugate
+gradient method.
