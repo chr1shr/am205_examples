@@ -19,7 +19,7 @@ while t<=2:
     yexact=exp(lam*t)
 
     # Print the solutions and error
-    print t,y[1],yexact,y[1]-yexact
+    print(t,y[1],yexact,y[1]-yexact)
 
     # Multi step
     yy=y[1]+dt*(1.5*f(y[1])-0.5*f(y[0]))

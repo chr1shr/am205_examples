@@ -11,4 +11,4 @@ for i in range(20):
     xa=log(xa+2)
     xb=exp(xb)-2
 
-    print xa,f(xa),xb,f(xb)
+    print(xa,f(xa),xb,f(xb))

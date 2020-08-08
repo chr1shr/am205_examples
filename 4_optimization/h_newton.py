@@ -24,4 +24,4 @@ while np.linalg.norm(s)>1e-8:
     x=x+s
 
     # Print the components of the current position and the norm of the gradient
-    print x[0],x[1],np.linalg.norm(s)
+    print(x[0],x[1],np.linalg.norm(s))

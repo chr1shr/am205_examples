@@ -3,7 +3,7 @@ from math import *
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Function to calculate the sum of absolute value of Lagrange polynomials 
+# Function to calculate the sum of absolute value of Lagrange polynomials
 def lsum(x,xp):
     ls=0
     for k in range(xp.size):

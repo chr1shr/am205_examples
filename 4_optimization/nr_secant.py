@@ -26,4 +26,4 @@ for i in range(20):
     xbb=xb;fxbb=fxb
     xb=tem
 
-    print xa,f(xa),xb,f(xb)
+    print(xa,f(xa),xb,f(xb))

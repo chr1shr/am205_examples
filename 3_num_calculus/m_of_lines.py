@@ -41,4 +41,4 @@ for j in range(m):
     e=[str(j*dx)]
     for i in range(snaps+1):
         e.append(str(u[i*iters,j]))
-    print " ".join(e)
+    print(" ".join(e))

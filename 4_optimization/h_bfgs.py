@@ -19,4 +19,4 @@ def hess_f(z):
 
 # Find minimum using BFGS
 x=op.fmin_bfgs(f,np.array([0,0]),fprime=grad_f)
-print x
+print(x)

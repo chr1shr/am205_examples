@@ -8,7 +8,7 @@ def f(x1,x2):
 
 # Print zeroth step
 (f1,f2)=f(x1,x2)
-print 0,x1,x2,f1,f2
+print(0,x1,x2,f1,f2)
 
 for i in range(1,31):
 
@@ -17,4 +17,4 @@ for i in range(1,31):
 
     # Print ith step
     (f1,f2)=f(x1,x2)
-    print i,x1,x2,f1,f2
+    print(i,x1,x2,f1,f2)

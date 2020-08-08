@@ -24,11 +24,11 @@ b1=np.linalg.lstsq(A,y)[0]
 # Solve directly
 AT=np.transpose(A)
 ATA=np.dot(AT,A)
-print "Condition number: ",np.linalg.cond(ATA)
+print("Condition number: ",np.linalg.cond(ATA))
 b2=np.linalg.solve(ATA,np.dot(AT,y))
 
 # Evaluate error
-print b1-b2
+print(b1-b2)
 
 # Plot results
 xnew=np.linspace(0,1,200)

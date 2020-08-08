@@ -27,5 +27,5 @@ while xx<3:
         yy+=b[i]
 
     # Print output and increment x position
-    print xx,yy,exp(-xx),yy-exp(-xx)
+    print(xx,yy,exp(-xx),yy-exp(-xx))
     xx+=0.01

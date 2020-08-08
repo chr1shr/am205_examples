@@ -15,14 +15,14 @@ def sum_exp_f(x,b):
     return fx
 
 # Create matrix where each column is an exponential, as opposed to a monomial
-# in the usual Vandermonde construction 
+# in the usual Vandermonde construction
 x=np.linspace(-1,1,20)
 A=np.array([[exp((i-n)*xx) for i in range(s)] for xx in x])
 y=np.cos(4*x)*np.exp(-x)
 
 # Solve using the least-squares function
 b=np.linalg.lstsq(A,y)[0]
-print "Norm(r)/Norm(b) :",np.linalg.norm(y-np.dot(A,b))/np.linalg.norm(b)
+print("Norm(r)/Norm(b) :",np.linalg.norm(y-np.dot(A,b))/np.linalg.norm(b))
 
 # Plot results
 xnew=np.linspace(-1,1,200)

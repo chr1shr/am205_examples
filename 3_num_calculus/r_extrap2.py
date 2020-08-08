@@ -17,7 +17,7 @@ while t<=2:
     xexact=exp(lam*t)
 
     # Print the solutions and error
-    print t,x,xexact,x-xexact
+    print(t,x,xexact,x-xexact)
 
     # Euler step
     x_1=x+dt*(lam*x)

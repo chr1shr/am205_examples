@@ -23,7 +23,7 @@ while t<=2:
     yexact=sin(t)
 
     # Print the solutions and error
-    print t,yme,yie,yhe,yexact,yme-yexact,yie-yexact,yhe-yexact
+    print(t,yme,yie,yhe,yexact,yme-yexact,yie-yexact,yhe-yexact)
 
     # Modified Euler step
     k1=h*f(t,yme)

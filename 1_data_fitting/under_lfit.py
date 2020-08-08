@@ -20,15 +20,15 @@ y=np.cos(4*x)
 # Solve using least squares routine. For an overdetermined system this finds
 # the interpolant that minimizes the norm of the parameter vector b1.
 b1=np.linalg.lstsq(A,y)[0]
-print "lstsq solve : Norm(r): ",np.linalg.norm(y-np.dot(A,b1))
+print("lstsq solve : Norm(r): ",np.linalg.norm(y-np.dot(A,b1)))
 
 # Solve using normal equations + regularizer
 mu=0.05
 AT=np.transpose(A)
 ATA=np.dot(AT,A)
-print "\nCondition number: ",np.linalg.cond(ATA)
+print("\nCondition number: ",np.linalg.cond(ATA))
 b2=np.linalg.solve(ATA+mu*mu*np.identity(n),np.dot(AT,y))
-print "Normal eqs. : Norm(r): ",np.linalg.norm(y-np.dot(A,b2))
+print("Normal eqs. : Norm(r): ",np.linalg.norm(y-np.dot(A,b2)))
 
 # Plot the two solutions
 xnew=np.linspace(0,1,200)

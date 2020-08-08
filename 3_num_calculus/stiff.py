@@ -22,7 +22,7 @@ while t<2:
     # Print solutions and exact solution
     ex1=2*exp(-t)-exp(-1000*t)
     ex2=-exp(-t)+exp(-1000*t)
-    print t,ex1,ex2,ye[0,0],ye[1,0],yi[0,0],yi[1,0]
+    print(t,ex1,ex2,ye[0,0],ye[1,0],yi[0,0],yi[1,0])
 
     # Explicit step
     ye=ye+dt*np.dot(a,ye)

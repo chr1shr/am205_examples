@@ -24,4 +24,4 @@ for m in range(10,1600,10):
         f=clock()
 
     # Print the average time to do a Cholesky factorization
-    print m,n,(f-e)/n
+    print(m,n,(f-e)/n)

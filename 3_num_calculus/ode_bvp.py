@@ -52,4 +52,4 @@ U=np.linalg.solve(A,F)
 # Print the exact and approximate solutions
 for i in range(n):
     uex=exp(x[i])*sin(2*pi*x[i])
-    print x[i],U[i],uex,U[i]-uex
+    print(x[i],U[i],uex,U[i]-uex)

@@ -19,9 +19,9 @@ for i in range(max_iters):
     Q_prod=np.dot(Q_prod,Q_k)
 
 # Print eigenvalues
-print np.diag(A_k)
+print(np.diag(A_k))
 
 # Print eigenvectors
-print Q_prod
+print(Q_prod)
 
-print np.linalg.eig(A)
+print(np.linalg.eig(A))

@@ -23,4 +23,4 @@ while r.successful() and r.t<2:
     # Print solution and comparison with exact answer
     ex1=2*exp(-r.t)-exp(-1000*r.t)
     ex2=-exp(-r.t)+exp(-1000*r.t)
-    print r.t,float(r.y[0]),float(r.y[1]),ex1,ex2,float(r.y[0])-ex1,float(r.y[1])-ex2
+    print(r.t,float(r.y[0]),float(r.y[1]),ex1,ex2,float(r.y[0])-ex1,float(r.y[1])-ex2)

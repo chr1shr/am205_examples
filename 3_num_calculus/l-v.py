@@ -21,12 +21,12 @@ time=np.linspace(0,70,500)
 # Initial conditions, set to the initial populations of prey and predators
 xinit=np.array([10,5])
 
-# Solve ODE using the "odeint" library in SciPy.
+# Solve ODE using the "odeint" library in SciPy
 x=odeint(deriv,xinit,time)
 
 # Print the solutions
 for i in range(0,500):
-    print time[i],x[i,0],x[i,1]
+    print((time[i],x[i,0],x[i,1]))
 
 # Plot the solutions
 plt.figure()

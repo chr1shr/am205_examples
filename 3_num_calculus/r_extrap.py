@@ -16,7 +16,7 @@ while t<=2:
     yexact=exp(lam*t)
 
     # Print the solutions and error
-    print t,y,yexact,y-yexact
+    print(t,y,yexact,y-yexact)
 
     # Euler step
     y_1=y+dt*(lam*y)

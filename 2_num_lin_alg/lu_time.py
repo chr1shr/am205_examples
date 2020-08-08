@@ -8,7 +8,7 @@ for m in range(10,1600,10):
 
     # Construct a random matrix to apply the LU factorization to
     a=np.random.random((m,m))
-    
+
     # Measure the clock
     e=clock()
     n=0
@@ -21,4 +21,4 @@ for m in range(10,1600,10):
         f=clock()
 
     # Print the average time to do an LU factorizations
-    print m,n,(f-e)/n
+    print(m,n,(f-e)/n)

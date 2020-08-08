@@ -4,7 +4,7 @@ import sys
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
-# Parameter setup 
+# Parameter setup
 a=0.0
 b=1.0
 n=41
@@ -35,23 +35,23 @@ while True:
     x_k=x_k+alpha_k[0,0]*p_k
     r_k_old=r_k
     r_k=r_k-alpha_k[0,0]*(A*p_k)
-    
+
     rel_residual=np.linalg.norm(r_k)/np.linalg.norm(rhs)
-    print "iteration=%d, relative residual=%g" % (count, rel_residual)
-    
+    print("iteration=%d, relative residual=%g" % (count, rel_residual))
+
     if rel_residual < TOL:
         break
-    
+
     beta_k=np.dot(r_k.T,r_k)/np.dot(r_k_old.T,r_k_old)
 
     p_k=r_k+beta_k[0,0]*p_k
-    
+
     count+=1
 
 # Print grid spacing and condition number. This may get very expensive for a
 # big grid, since it uses a dense linear algebra routine to compute the
 # condition number.
-print "h=%g, condition number=%g\n" % (h,np.linalg.cond(A.todense()))
+print("h=%g, condition number=%g\n" % (h,np.linalg.cond(A.todense())))
 
 # Assemble solution in a grid
 uu=np.zeros((n,n))

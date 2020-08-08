@@ -30,7 +30,7 @@ for i in range(1,m-1):
     b[i]=sin(i*dx*pi)
 
 # Integrate the PDE
-print 0.,0.,0.
+print(0.,0.,0.)
 for j in range(0,iters+1):
 
     # Forward Euler
@@ -52,4 +52,4 @@ for j in range(0,iters+1):
             sol=sin(i*dx*pi)*exp(-alpha*pi*pi*t)
             l2a+=(sol-a[i])**2
             l2b+=(sol-b[i])**2
-        print t,sqrt(l2a/m),sqrt(l2b/m)
+        print(t,sqrt(l2a/m),sqrt(l2b/m))

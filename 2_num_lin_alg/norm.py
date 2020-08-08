@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 x=np.array([1.2,0.5,-0.1,2.3,-1.05,-2.35])
 
 # Calculate the p-norm for a range of values of p
-pr=range(1,100)
+pr=list(range(1,100))
 nx=[np.linalg.norm(x,p) for p in pr]
 
 # Calculate the infinity norm

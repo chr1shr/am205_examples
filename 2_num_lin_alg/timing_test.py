@@ -20,6 +20,6 @@ for i in range(1000):
 # Print the elapsed time, using both the time() routine and the clock() routine
 ttotal=time()-t0
 ctotal=clock()-c0
-print "time routine:",ttotal
-print "clock routine:",ctotal
-print "clock/time ratio:",ctotal/ttotal
+print("time routine:",ttotal)
+print("clock routine:",ctotal)
+print("clock/time ratio:",ctotal/ttotal)

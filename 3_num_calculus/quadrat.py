@@ -47,5 +47,5 @@ ex=cos(1)-cos(5)
 # an upper bound, which is still true.
 j=1
 while j<=65536:
-    print j,4./float(j),trap(f,1,5,j)-ex,simp(f,1,5,j)-ex
+    print(j,4./float(j),trap(f,1,5,j)-ex,simp(f,1,5,j)-ex)
     j*=2

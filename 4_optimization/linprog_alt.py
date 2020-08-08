@@ -12,4 +12,4 @@ c=[-5.,-4.,-6.]
 # Solve the linear program
 options={'disp': 1}
 sol=linprog(c,A_ub=a,b_ub=b,options=options)
-print(sol['x'])
+print((sol['x']))

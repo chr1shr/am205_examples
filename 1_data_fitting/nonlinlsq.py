@@ -46,9 +46,9 @@ def grad_phi(x):
 
 # Do Levenberg-Marquardt algorithm and print diagnostic information
 sol=root(grad_phi,b_init,jac=False,method='lm')
-print "Predicted location:",sol.x
-print "grad(phi):",grad_phi(sol.x)
-print "phi:",phi(sol.x)
+print("Predicted location:",sol.x)
+print("grad(phi):",grad_phi(sol.x))
+print("phi:",phi(sol.x))
 
 # Plot results
 n=100

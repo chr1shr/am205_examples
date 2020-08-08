@@ -5,7 +5,7 @@ import numpy as np
 
 # Function to interpolate
 def f(x):
-    return abs(x) 
+    return abs(x)
 
 # Function to evaluate the Lagrange interpolation
 def lagr(x,xp,yp):

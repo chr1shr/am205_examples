@@ -10,4 +10,4 @@ c=matrix([-5.,-4.,-6.])
 
 # Solve the linear program
 sol=solvers.lp(c,a,b)
-print(sol['x'])
+print((sol['x']))

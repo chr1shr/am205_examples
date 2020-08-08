@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import sys
 
-# Parameter setup 
+# Parameter setup
 a=0.0
 b=1.0
 n=41
@@ -25,7 +25,7 @@ D2=sp.diags([cen,hor,hor,ver,ver],[0,1,-1,nn,-nn])
 # Calculate eigenvalues and eigenvectors
 vals,vecs=spl.eigs(D2,k=8,which='SM')
 
-print vals
+print(vals)
 
 # Assemble an eigenvector in a grid
 uu=np.zeros((n,n))
