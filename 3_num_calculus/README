@@ -2,7 +2,7 @@ Harvard Applied Math 205: Code Examples
 Unit 3: Numerical Calculus
 ==========================
 quadrat.py - Integrates a function using composite trapezoid and Simpson's
-rules. Outputs the error as a function of the interval length h. 
+rules. Outputs the error as a function of the interval length h.
 
 diff.py - Constructs a differentiation matrix, and uses it to calculate the
 derivative of a test function.

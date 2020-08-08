@@ -5,11 +5,14 @@ computing. See the main website here:
 http://iacs-courses.seas.harvard.edu/courses/am205/
 
 This Git repository contains example codes from the course. The codes are
-primarily written in Python, and make use of several commonly-used libraries
+primarily written in Python, and make use of several commonly-used libraries:
 
-- NumPy for numerical linear algebra (www.numpy.org)
-- SciPy for scientific routines and algorithms (www.scipy.org)
-- Matplotlib for graphing and visualization (matplotlib.org)
+- [NumPy](https://numpy.org) for numerical linear algebra
+- [SciPy](https://scipy.org) for scientific routines and algorithms
+- [Matplotlib](https://matplotlib.org) for graphing and visualization
+
+In addition, a number of programs output data to text in a format that can be
+read by the freeware plotting program [Gnuplot](http://gnuplot.info).
 
 ## Organization
 The course is divided into six units:

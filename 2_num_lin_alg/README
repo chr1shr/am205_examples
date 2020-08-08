@@ -14,4 +14,4 @@ based on the LAPACK library (http://www.netlib.org/lapack/, a highly
 optimized library for dense matrix calculations.)
 
 chol_time.py - Measures the time taken by Python's Cholesky factorization
-routine, as a function of the matrix size. 
+routine, as a function of the matrix size.
