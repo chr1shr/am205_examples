@@ -2,7 +2,7 @@
 Harvard AM205 is a graduate course the provides a broad overview of scientific
 computing. See the main website here:
 
-http://iacs-courses.seas.harvard.edu/courses/am205/
+http://courses.seas.harvard.edu/courses/am205/
 
 This Git repository contains example codes from the course. The codes are
 primarily written in Python, and make use of several commonly-used libraries:
