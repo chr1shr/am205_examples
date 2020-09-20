@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from math import *
 import matplotlib.pyplot as plt
 import numpy as np
@@ -32,8 +32,9 @@ yy1=np.array([f(q) for q in xx])
 
 # Plot figure using Matplotlib
 plt.figure()
-plt.plot(xx,yy)
-plt.plot(xx,yy1)
+plt.plot(xx,yy,label='Interpolant')
+plt.plot(xx,yy1,label='Function')
+plt.legend()
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from math import *
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,20 +6,20 @@ import matplotlib.pyplot as plt
 # Vandermonde interpolation function
 n=12
 def vand_f(x,b):
-    fx=b[n-1]
+    fx=b[0]
     for i in range(n-1):
         fx*=x
-        fx+=b[n-2-i]
+        fx+=b[i+1]
     return fx
 
 # Construct rectangular Vandermonde matrix
 x=np.linspace(0.2,1,5)
-A=np.fliplr(np.vander(x,N=12))
+A=np.vander(x,n)
 y=np.cos(4*x)
 
-# Solve using least squares routine. For an overdetermined system this finds
+# Solve using least squares routine. For an underdetermined system this finds
 # the interpolant that minimizes the norm of the parameter vector b1.
-b1=np.linalg.lstsq(A,y)[0]
+b1=np.linalg.lstsq(A,y,rcond=None)[0]
 print("lstsq solve : Norm(r): ",np.linalg.norm(y-np.dot(A,b1)))
 
 # Solve using normal equations + regularizer

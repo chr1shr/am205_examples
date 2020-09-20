@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import numpy as np
 from scipy.interpolate import interp1d
 import matplotlib.pyplot as plt
@@ -14,6 +14,8 @@ g2=interp1d(t,y,kind='cubic')
 
 # Use splines to plot a spiral
 tnew=np.linspace(0,5,200)
+plt.xlabel('x')
+plt.ylabel('y')
 plt.plot(x,y,'o',f(tnew),g(tnew),'-',f2(tnew),g2(tnew),'--')
 plt.legend(['data','linear','cubic'],loc='best')
 plt.show()

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from math import *
 import numpy as np
 
@@ -12,7 +12,7 @@ V=np.vander(x)
 b=np.linalg.solve(V,y)
 
 # Add optional random perturbation
-#b+=1e-6*np.random.rand(n);
+#b+=1e-6*np.random.rand(n)
 
 # Plot interpolant
 xx=0
@@ -21,7 +21,7 @@ while xx<3:
     # Use Horner's method to construct polynomial. Note that because of
     # Python's Vandermonde ordering convention, b[0] holds the coefficient of
     # the highest power.
-    yy=b[0];
+    yy=b[0]
     for i in range(1,n):
         yy*=xx
         yy+=b[i]

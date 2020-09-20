@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from math import *
 import numpy as np
 import matplotlib.pyplot as plt
@@ -21,12 +21,14 @@ A=np.array([[exp((i-n)*xx) for i in range(s)] for xx in x])
 y=np.cos(4*x)*np.exp(-x)
 
 # Solve using the least-squares function
-b=np.linalg.lstsq(A,y)[0]
+b=np.linalg.lstsq(A,y,rcond=None)[0]
 print("Norm(r)/Norm(b) :",np.linalg.norm(y-np.dot(A,b))/np.linalg.norm(b))
 
 # Plot results
 xnew=np.linspace(-1,1,200)
 vnew=[sum_exp_f(q,b) for q in xnew]
+plt.xlabel('x')
+plt.ylabel('y')
 plt.plot(x,y,'o',xnew,vnew,'-')
 plt.legend(['data','least sq.'],loc='best')
 plt.show()

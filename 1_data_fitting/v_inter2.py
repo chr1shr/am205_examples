@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from math import *
 import matplotlib.pyplot as plt
 import numpy as np
@@ -21,7 +21,7 @@ V=np.vander(x)
 b=np.linalg.solve(V,y)
 
 # Add optional random perturbation
-b+=1e-6*np.random.rand(n);
+b+=1e-6*np.random.rand(n)
 
 # Plot interpolant
 xx=np.linspace(0,3,301)
@@ -31,8 +31,9 @@ yy3=np.array([f(q,b)-exp(-q) for q in xx])
 
 # Plot figure using Matplotlib
 plt.figure()
-plt.plot(xx,yy)
-plt.plot(xx,yy2)
+plt.plot(xx,yy,label="Interpolant")
+plt.plot(xx,yy2,label="exp(-x)")
+plt.legend()
 plt.xlabel('x')
 plt.ylabel('y')
 plt.show()
