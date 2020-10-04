@@ -1,5 +1,5 @@
 #!/usr/bin/python
-from time import clock,time
+from time import process_time,time
 import numpy as np
 import scipy.linalg
 
@@ -12,20 +12,24 @@ while m<4500:
     a=np.random.random((m,m))
     b=np.dot(a,a.T)
 
-    # Measure the clock
-    e=clock()
+    # Store the initial wall clock time
+    t=time()
+
+    # Measure the process time
+    e=process_time()
     n=0
     f=e
 
     # Do as many Cholesky factorizations as possible within a 0.2 second
-    # interval
+    # interval of process time
     while f-e<0.2:
         n+=1
         l=scipy.linalg.cholesky(b)
-        f=clock()
+        f=process_time()
 
-    # Print the average time to do a Cholesky factorization
-    print(m,n,(f-e)/n)
+    # Print the average process time and wall clock time to do a Cholesky
+    # factorization
+    print("%d %d %.5g %.5g"%(m,n,(f-e)/n,(time()-t)/n))
 
     # Increase m by a multiplicative factor
     m+=m//10

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from math import *
 import numpy as np
 import matplotlib.pyplot as plt
@@ -15,14 +15,14 @@ y_beac=[0.7491,0.5832,0.7400,0.2348,0.7350,0.9706,0.8669,0.0862,0.3664,0.3692]
 
 # Generate the (noisy) data y, and set initial guess
 noise_level=0.05
-y=np.zeros(10)
+y=np.empty(10)
 for i in range(10):
     dx=bx_t-x_beac[i]
     dy=by_t-y_beac[i]
     y[i]=sqrt(dx*dx+dy*dy)+noise_level*random()
 b_init=np.array([0.4,0.9])
 
-# Function to be minimized
+# The function, phi, to be minimized
 def phi(x):
     s=0
     for i in range(10):
@@ -32,7 +32,7 @@ def phi(x):
         s+=ss*ss
     return s
 
-# Gradient
+# Gradient of phi
 def grad_phi(x):
     f0=0
     f1=0
@@ -50,7 +50,7 @@ print("Predicted location:",sol.x)
 print("grad(phi):",grad_phi(sol.x))
 print("phi:",phi(sol.x))
 
-# Plot results
+# Plot results - create contours of phi function
 n=100
 xx=np.linspace(0,1,n)
 yy=np.linspace(0,1,n)
@@ -59,9 +59,13 @@ pxy=np.zeros((n,n))
 for i in range(n):
     for j in range(n):
         pxy[i,j]=phi([X[i,j],Y[i,j]])
-plt.contourf(X, Y, pxy, 16, alpha=.75)
-C = plt.contour(X, Y, pxy, 16, colors='black', linewidth=.5)
-plt.plot(x_beac,y_beac,'o')
-plt.plot(sol.x[0],sol.x[1],'x',color='black')
-plt.plot(bx_t,by_t,'o',color='red')
+plt.contourf(X,Y,pxy,16,alpha=.75)
+C = plt.contour(X,Y,pxy,16,colors='black')
+
+# Plot results show beacon positions and true/predicted transmitter location
+plt.xlabel('x')
+plt.ylabel('y')
+plt.plot(x_beac,y_beac,'o',color='red')
+plt.plot(bx_t,by_t,'x',color='black')
+plt.plot(sol.x[0],sol.x[1],'o',color='yellow')
 plt.show()
