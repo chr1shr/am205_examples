@@ -4,7 +4,8 @@ import numpy as np
 import scipy.linalg
 
 # Loop over a variety of matrix sizes
-for m in range(10,1600,10):
+m=10
+while m<4500:
 
     # Construct a random matrix to apply the LU factorization to
     a=np.random.random((m,m))
@@ -22,3 +23,6 @@ for m in range(10,1600,10):
 
     # Print the average time to do an LU factorizations
     print(m,n,(f-e)/n)
+
+    # Increase m by a multiplicative factor
+    m+=m//10

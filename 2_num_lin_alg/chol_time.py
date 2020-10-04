@@ -4,7 +4,8 @@ import numpy as np
 import scipy.linalg
 
 # Loop over a variety of matrix sizes
-for m in range(10,1600,10):
+m=10
+while m<4500:
 
     # Construct a symmetric positive-definite (SPD) matrix
     # by multiplying a random matrix by its transpose
@@ -25,3 +26,6 @@ for m in range(10,1600,10):
 
     # Print the average time to do a Cholesky factorization
     print(m,n,(f-e)/n)
+
+    # Increase m by a multiplicative factor
+    m+=m//10
