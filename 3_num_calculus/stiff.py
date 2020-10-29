@@ -15,7 +15,7 @@ yi=np.array([[1],[0]])
 # Starting time and timestep (currently chosen within the stability region of
 # the explicit method)
 t=0
-dt=0.001
+dt=0.1
 
 while t<2:
 

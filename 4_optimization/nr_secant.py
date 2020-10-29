@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from math import *
 
 def f(x):

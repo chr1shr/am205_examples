@@ -1,11 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 # Import math functions
 from math import *
 
 # Initial variables and constants
 t=0
 h=0.05
-lam=2
 
 # Function to integrate
 def f(t,y):

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import numpy as np
 
 # Himmelblau function - a common example used for testing optimization algorithms

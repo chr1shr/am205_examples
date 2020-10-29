@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from math import sqrt
 
 def f(x1,x2):

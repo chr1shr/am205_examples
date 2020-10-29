@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 from scipy.optimize import linprog
 import numpy as np
 

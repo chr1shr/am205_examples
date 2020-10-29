@@ -10,7 +10,7 @@ while m<4500:
     # Construct a random matrix to apply the LU factorization to
     a=np.random.random((m,m))
 
-    # Store the initial wall clock time
+    # Store the initial process time
     t=process_time()
 
     # Measure the wall clock time
