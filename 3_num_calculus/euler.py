@@ -1,11 +1,10 @@
-#!/usr/bin/python
-# Import math functions
-from math import *
+#!/usr/bin/python3
+from math import exp
 
 # Initial variables and constants
 y=1
 t=0
-dt=0.05
+h=0.1
 lam=0.5
 
 # Apply Euler step until t>2
@@ -18,7 +17,7 @@ while t<=2:
     print(t,y,yexact,y-yexact)
 
     # Euler step
-    y=y+dt*(lam*y)
+    y=y+h*(lam*y)
 
     # Update time
-    t+=dt
+    t+=h

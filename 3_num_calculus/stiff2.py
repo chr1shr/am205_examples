@@ -1,8 +1,6 @@
-#!/usr/bin/python
-import numpy as np
-import matplotlib.pyplot as plt
+#!/usr/bin/python3
 from scipy.integrate import ode
-from math import *
+from math import exp
 
 # Function
 def f(t,y,arg1):
@@ -12,13 +10,13 @@ def f(t,y,arg1):
 yinit=[1,0]
 
 # Set up stiff integrator and parameters
-r=ode(f).set_integrator('zvode', method='bdf')
+r=ode(f).set_integrator('zvode',method='bdf')
 r.set_initial_value(yinit,0).set_f_params(2.0).set_jac_params(2.0)
-dt=0.05
+h=0.05
 
 # Loop while the time is less than 2
 while r.successful() and r.t<2:
-    r.integrate(r.t+dt)
+    r.integrate(r.t+h)
 
     # Print solution and comparison with exact answer
     ex1=2*exp(-r.t)-exp(-1000*r.t)

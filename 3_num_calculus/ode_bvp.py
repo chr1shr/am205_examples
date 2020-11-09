@@ -1,7 +1,5 @@
-#!/usr/bin/python
-import matplotlib.pyplot as plt
+#!/usr/bin/python3
 import numpy as np
-import scipy.linalg
 from math import *
 
 # ODE parameters

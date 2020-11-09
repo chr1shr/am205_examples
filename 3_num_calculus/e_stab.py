@@ -1,18 +1,16 @@
-#!/usr/bin/python
-# Import math functions
-from math import *
+#!/usr/bin/python3
+from math import exp
 
 # Initial variables and constants
 y=1
 t=0
-dt=0.1
+h=0.1
 
-# Choose the constant in the ODE, dx/dt=-lam*x. We need -2=<dt*lam=<0 for
-# stability.
-lam=-25
+# Choose the constant in the ODE, dy/dt=-lam*y. We need -2=<h*lam=<0 for stability.
+lam=-21
 
-# Apply Euler step until t>2
-while t<=2:
+# Apply forward Euler step until t>1
+while t<=1:
 
     # Analytical solution
     yexact=exp(lam*t)
@@ -21,7 +19,7 @@ while t<=2:
     print(t,y,yexact,y-yexact)
 
     # Euler step
-    y=y+dt*(lam*y)
+    y=y+h*(lam*y)
 
     # Update time
-    t+=dt
+    t+=h

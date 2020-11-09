@@ -1,8 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import numpy as np
-import matplotlib.pyplot as plt
-from scipy.integrate import odeint
-from math import *
+from math import exp
 
 # Matrices
 a=np.array([[998,1998],[-999,-1999]])
@@ -15,7 +13,7 @@ yi=np.array([[1],[0]])
 # Starting time and timestep (currently chosen within the stability region of
 # the explicit method)
 t=0
-dt=0.1
+h=0.02
 
 while t<2:
 
@@ -25,9 +23,8 @@ while t<2:
     print(t,ex1,ex2,ye[0,0],ye[1,0],yi[0,0],yi[1,0])
 
     # Explicit step
-    ye=ye+dt*np.dot(a,ye)
+    ye=ye+h*np.dot(a,ye)
 
     # Implicit step
-    yi=np.linalg.solve(i-dt*a,yi)
-
-    t+=dt
+    yi=np.linalg.solve(i-h*a,yi)
+    t+=h

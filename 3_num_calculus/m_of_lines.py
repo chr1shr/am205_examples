@@ -1,44 +1,37 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import numpy as np
 from scipy.integrate import odeint
-from math import *
+from math import exp
 
-# Grid size
+# Grid size and snapshots
 m=64
-a=np.zeros((m))
 snaps=40
-iters=10
 
-# Function to return one lower index, wrapping around at zero
-def li(i):
-	if i==0: return m-1
-	else: return i-1
-
-# Semi-discretization
-def deriv(x,t):
-	return np.array([-cidx*(x[i]-x[li(i)]) for i in range(m)])
+# RHS of ODE system from semi-discretization
+def deriv(u,t):
+    return -cidx*(u-np.roll(u,1))
 
 # PDE-related constants
 c=0.1
 dx=1.0/m
 cidx=c/dx
-dt=0.01
+dt=0.1
 
 # Initial condition
+uinit=np.empty((m))
 for i in range(m):
     x=dx*i
-    a[i]=exp(-20*(x-0.5)**2)
+    uinit[i]=exp(-20*(x-0.5)**2)
 
-# Solve ODE using the "odeint" library in SciPy
-steps=snaps*iters
-time=np.linspace(0,dt*steps,steps+1)
+# Define the times for saving snapshots
+time=np.linspace(0,dt*snaps,snaps+1)
 
 # Integrate the semi-discretized PDE
-u=odeint(deriv,a,time);
+u=odeint(deriv,uinit,time);
 
 # Output results
 for j in range(m):
     e=[str(j*dx)]
     for i in range(snaps+1):
-        e.append(str(u[i*iters,j]))
+        e.append(str(u[i,j]))
     print(" ".join(e))

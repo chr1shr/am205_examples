@@ -1,11 +1,11 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import numpy as np
 from math import *
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 
 # Grid setup
-m=10
+m=32
 mm=m*m
 h=1.0/(m+1)
 
@@ -48,5 +48,5 @@ ax=fig.gca(projection='3d')
 surf=ax.plot_surface(mgx,mgy,uu,rstride=1,cstride=1,linewidth=0)
 ax.set_xlabel('x')
 ax.set_ylabel('y')
-ax.set_zlabel('z')
+ax.set_zlabel('u')
 plt.show()

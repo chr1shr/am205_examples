@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-# Import math functions
-from math import *
+from math import cos,sin,exp
 
 # Initial variables and constants
 t=0
@@ -8,21 +7,21 @@ h=0.05
 
 # Function to integrate
 def f(t,y):
-    return cos(t)
+    return exp(-0.5*t*t)-y*t
 
-# Starting values for modified Euler and improved Euler
+# Starting values for modified Euler, improved Euler, and Ralston
 yme=0
 yie=0
-yhe=0
+yre=0
 
-# Apply Euler step until t>6
-while t<=2:
+# Apply timesteps until t>6
+while t<=6:
 
     # Analytical solution
-    yexact=sin(t)
+    yexact=t*exp(-0.5*t*t)
 
     # Print the solutions and error
-    print(t,yme,yie,yhe,yexact,yme-yexact,yie-yexact,yhe-yexact)
+    print(t,yme,yie,yre,yexact,yme-yexact,yie-yexact,yre-yexact)
 
     # Modified Euler step
     k1=h*f(t,yme)
@@ -35,9 +34,9 @@ while t<=2:
     yie+=0.5*(k1+k2)
 
     # Ralston's method
-    k1=h*f(t,yhe)
-    k2=h*f(t+2*h/3.,yhe+k1*2/3.)
-    yhe+=0.25*k1+0.75*k2
+    k1=h*f(t,yre)
+    k2=h*f(t+2*h/3.,yre+k1*2/3.)
+    yre+=0.25*k1+0.75*k2
 
     # Update time
     t+=h
