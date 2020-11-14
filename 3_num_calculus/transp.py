@@ -4,15 +4,15 @@ from math import exp
 
 # Grid size
 m=64
-a=np.zeros((m))
-b=np.zeros((m))
+a=np.empty((m))
+b=np.empty((m))
 snaps=40
 iters=10
-z=np.zeros((m,snaps+1))
+z=np.empty((m,snaps+1))
 
 # PDE-related constants; try switching c to -0.1 to see the
 # unstable scheme
-c=0.1
+c=-0.1
 dx=1.0/m
 dt=0.01
 nu=c*dt/dx

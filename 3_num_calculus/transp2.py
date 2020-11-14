@@ -1,14 +1,14 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import numpy as np
-from math import *
+from math import exp
 
 # Grid size
 m=64
-a=np.zeros((m))
-b=np.zeros((m))
+a=np.empty((m))
+b=np.empty((m))
 snaps=100
 iters=40
-z=np.zeros((m,snaps+1))
+z=np.empty((m,snaps+1))
 
 # PDE-related constants
 c=0.1
@@ -22,7 +22,7 @@ for i in range(m):
     a[i]=exp(-20*(x-0.5)**2)
 z[:,0]=a
 
-# Integrate the PDE using centered-differencing
+# Integrate the PDE using centered differencing
 for i in range(1,snaps+1):
     for k in range(iters):
         for j in range(m):

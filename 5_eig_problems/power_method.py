@@ -1,9 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import numpy as np
 
 # Initialize the matrix and shift
 A=np.array([[4.,1.],[1.,-2.]])
-shift=-1
+shift=3
 
 # Choose an initial guess
 x=np.random.randn(2,1)

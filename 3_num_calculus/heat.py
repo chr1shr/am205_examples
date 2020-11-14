@@ -1,21 +1,21 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 import numpy as np
 from math import *
 
 # Grid size
 m=64
-a=np.zeros((m))
-b=np.zeros((m))
+a=np.empty((m))
+b=np.empty((m))
 snaps=40
 iters=400
-z=np.zeros((m,snaps+1))
+z=np.empty((m,snaps+1))
 
-# PDE-related constants. The timestep is chosen to be just larger than the
-# point of stability, causing the 2-gridpoint oscillation to slowly grow.
-alpha=0.1
+# PDE-related constants. Change the timestep prefactor to 0.501 to go slightly
+# beyond the point of stability, where the 2-gridpoint oscillation will slowly
+# grow.
 dx=1.0/m
-dt=0.501*dx*dx/alpha
-nu=alpha*dt/(dx*dx)
+dt=0.1*dx*dx
+nu=dt/(dx*dx)
 lam=1
 
 # Initial condition
@@ -32,7 +32,7 @@ for i in range(1,snaps+1):
             if jl<0: jl+=m
             jr=j+1
             if jr>=m: jr-=m
-            b[j]=((1-2*nu)*a[j]+nu*(a[jl]+a[jr]))+dt*a[j]**3*0.01
+            b[j]=((1-2*nu)*a[j]+nu*(a[jl]+a[jr]))
         a=np.copy(b)
     z[:,i]=a
 
