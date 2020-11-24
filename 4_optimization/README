@@ -11,11 +11,12 @@ other diverges.
 iter_2d.py - Demonstrates a fixed-point iteration to find the solution of a
 two-dimensional nonlinear function.
 
-fsolve.py - Demonstrates Python's "fsolve" routine for finding the nodes and
-weights in the two-point Gauss quadrature scheme.
+gq_solve.py - Compares a custom implementation of the Newton method to
+Python's "fsolve" routine for finding the nodes and weights in the two-point
+Gauss quadrature scheme.
 
-nr_secant.py - Uses the Newton-Raphson and secant methods to find the solution
-to a nonlinear equation.
+n_secant.py - Uses the Newton and secant methods to find the solution to a
+nonlinear equation.
 
 h_newton.py - Finds critical points of the Himmelblau function using the
 Newton method.

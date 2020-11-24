@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from math import *
+from math import sin
 
 # Function to consider
 def f(x):
