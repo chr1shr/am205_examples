@@ -18,14 +18,29 @@ Gauss quadrature scheme.
 n_secant.py - Uses the Newton and secant methods to find the solution to a
 nonlinear equation.
 
+himmelblau.py - A common program file that defines the Himmelblau function, a
+common optimization benchmark function. The Jacobian and Hessian of the
+Himmelblau function are also defined. This file is used by the h_sdescent.py,
+h_newton.py, and h_bfgs.py examples.
+
+h_sdescent.py - Finds minima of the Himmelblau function using the steepest
+descent method.
+
 h_newton.py - Finds critical points of the Himmelblau function using the
 Newton method.
 
 h_bfgs.py - Finds minima of the Himmelblau function using the BFGS
 optimization method.
 
+penalty.py - Demonstrates solving a constrained optimization problem using
+the penalty method.
+
 linprog.py - this Python program solves the linear program described in the
 slides. It makes use of the Python module cvxopt that is available online.
 
 linprog_alt.py - this is an alternative Python program that solves the same
 linear program, but with the linprog library in SciPy.
+
+feasible.gnu - Data to draw the wireframe outline of the feasible set for
+the example linear program. In Gnuplot, type "splot 'feasible.gnu' with lp"
+to see a 3D plot of the outline.

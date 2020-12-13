@@ -2,7 +2,7 @@
 import numpy as np
 from scipy.optimize import fsolve
 
-# Mode: 0 = custom Newton method 
+# Mode: 0 = custom Newton method
 #       1 = fsolve with Jacobian
 #       2 = fsolve without Jacobian
 mode=2

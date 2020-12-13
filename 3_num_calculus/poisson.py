@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import numpy as np
 from math import *
+from matplotlib import cm
 from mpl_toolkits.mplot3d import Axes3D
 import matplotlib.pyplot as plt
 
@@ -11,7 +12,7 @@ h=1.0/(m+1)
 
 # Create derivative matrix and source term
 d=np.zeros((mm,mm))
-f=np.zeros((mm))
+f=np.empty((mm))
 hfac=1/(h*h)
 for i in range(m):
     y=(i+1)*h
@@ -27,8 +28,9 @@ for i in range(m):
 
         # Source term
         x=(j+1)*h
-        f[ij]=exp(-(x-0.25)**2-(y-0.5)**2)
+        f[ij]=-exp(-(x-0.25)**2-(y-0.5)**2)
 
+# Display the sparsity structure of the derivative matrix
 plt.spy(d)
 plt.show()
 
@@ -45,7 +47,7 @@ xa=np.linspace(0,1,m+2)
 mgx,mgy=np.meshgrid(xa,xa);
 fig=plt.figure()
 ax=fig.gca(projection='3d')
-surf=ax.plot_surface(mgx,mgy,uu,rstride=1,cstride=1,linewidth=0)
+surf=ax.plot_surface(mgx,mgy,uu,cmap=cm.plasma,rstride=1,cstride=1,linewidth=0)
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_zlabel('u')
