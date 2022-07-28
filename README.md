@@ -6,8 +6,8 @@ the main website is now located here:
 
 https://people.math.wisc.edu/~chr/am205
 
-This Git repository contains example codes from the course. The codes are
-primarily written in Python, and make use of several commonly-used libraries:
+The codes are primarily written in Python, and make use of several
+commonly-used libraries:
 
 - [NumPy](https://numpy.org) for numerical linear algebra
 - [SciPy](https://scipy.org) for scientific routines and algorithms
