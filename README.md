@@ -1,8 +1,10 @@
 # Harvard Applied Math 205: Code examples
 Harvard AM205 is a graduate course the provides a broad overview of scientific
-computing. See the main website here:
+computing. This Git repository contains example codes from the course taught by
+[Chris H. Rycroft](https://people.math.wisc.edu/~chr) from 2014 to 2021, and
+the main website is now located here:
 
-http://courses.seas.harvard.edu/courses/am205/
+https://people.math.wisc.edu/~chr/am205
 
 This Git repository contains example codes from the course. The codes are
 primarily written in Python, and make use of several commonly-used libraries:
